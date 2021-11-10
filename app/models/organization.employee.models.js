@@ -1,6 +1,6 @@
 const mangoose = require("mongoose");
 const Schema = mangoose.Schema;
-const Branch = new mangoose.Schema(
+const Employee = new mangoose.Schema(
   {
     _id: mangoose.Schema.Types.ObjectId,
     name: {
@@ -9,7 +9,7 @@ const Branch = new mangoose.Schema(
     post:{
         type:String
     },
-    // array object idname,id proof document
+    // array object idname,id proof document,documentId
     idProof:{
       type:Array
     },
@@ -37,21 +37,16 @@ const Branch = new mangoose.Schema(
     country:{
       type:String
     },
-    telephoneNumber:{
+    contactNumber:{
         type:Array
-    },
-    email:{
-        type:String
     },
     branchId: {
         type: Schema.Types.ObjectId,
         ref: "Branch",
       },
-
-   
   },
   {
     versionKey: false,
   }
 );
-module.exports = mangoose.model("Branch", Branch);
+module.exports = mangoose.model("Employee", Employee);

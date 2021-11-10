@@ -2,7 +2,9 @@ const mangoose = require("mongoose");
 const Schema = mangoose.Schema;
 const Branch = new mangoose.Schema(
   {
-    _id: mangoose.Schema.Types.ObjectId,
+    _id: {
+      type: mangoose.Schema.Types.ObjectId,
+    },
     name: {
       type: String,
     },
@@ -15,17 +17,17 @@ const Branch = new mangoose.Schema(
     landmark: {
       type: String,
     },
-    pincode:{
-      type:String
+    pincode: {
+      type: String,
     },
-    city:{
-      type:String
+    city: {
+      type: String,
     },
-    state:{
-      type:String
+    state: {
+      type: String,
     },
-    country:{
-      type:String
+    country: {
+      type: String,
     },
     telephoneNumber: {
       type: Array,
@@ -40,10 +42,6 @@ const Branch = new mangoose.Schema(
     foundedDate: {
       type: String,
     },
-    branchId:{
-      type:String,
-      unique:true
-    }
   },
   {
     versionKey: false,

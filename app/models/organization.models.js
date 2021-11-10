@@ -3,7 +3,8 @@ const Organization = new mangoose.Schema(
   {
     _id: {
       type:mangoose.Schema.Types.ObjectId,
-      ref:"Branch"
+      ref:"Branch",
+      ref:"Member"
     },
     name: {
       type: String,

@@ -9,6 +9,9 @@ const Member = new mangoose.Schema(
     post:{
         type:String
     },
+    emai:{
+      type:String
+    },
     // array object idname,id proof document
     idProof:{
       type:Array
@@ -40,15 +43,10 @@ const Member = new mangoose.Schema(
     telephoneNumber:{
         type:Array
     },
-    email:{
-        type:String
-    },
     organizationId: {
         type: Schema.Types.ObjectId,
         ref: "Organization",
-      },
-
-   
+      }
   },
   {
     versionKey: false,
