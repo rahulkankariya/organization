@@ -5,7 +5,7 @@ const organization = require("../models/organization.models");
 const branch = require("../models/branch.models");
 const employee = require("../models/organization.employee.models");
 const planname = require('../models/planName.models');
-const plantype = require('../../planType.model');
+const plantype = require('../../extramodels/planType.model');
 exports.organization = async (req, res) => {
   try {
     const { error } = OrganizationValidation(req.body);
