@@ -4,6 +4,8 @@ const Branch = new mangoose.Schema(
   {
     _id: {
       type: mangoose.Schema.Types.ObjectId,
+      ref:"PlanName",
+      ref:"Employee"
     },
     name: {
       type: String,
